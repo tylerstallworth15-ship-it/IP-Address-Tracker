@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" type="text/css" href="./CSS/app.css">
+  <link rel="stylesheet" type="text/css" href="./CSS/foundation.css">
+  <link rel="stylesheet" type="text/css" href="./CSS/foundation.min.css">
+  <script src="JS/app.js" defer></script>
   <title>Frontend Mentor | IP Address Tracker</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -13,18 +14,34 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+
+
 </head>
 <body>
-
-  IP Address Tracker
-
-  Search for any IP address or domain
-
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
+  <h1>Address Tracker</h1>
+ 
+  <nav>
+    <button><p>IP Address</p></button>
+    <button><p>Location</p></button>
+    <button><p>Timezone</p></button>
+     <!-- add offset value dynamically using the API -->
   ISP
+
+    <div class="logo">
+      
+    </div>
+  </nav>  
+  <form id="ip-form">
+    <input type="text" id="ip-input" placeholder="Search for any IP address or domain" required>
+    <button type="submit">
+      <img src="./images/icon-arrow.svg" alt="Submit">
+    </button>
+      
+    
+
+  
+
+ 
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
