@@ -1,5 +1,5 @@
 const API_key = 'at_8FPC9eMlN6TiaN4yDTyLP0aCsAKZ8';
-const API_URL = 'https://geo.ipify.org/api/v2/country,city?apiKey=at_8FPC9eMlN6TiaN4yDTyLP0aCsAKZ8';
+const API_URL = `https://geo.ipify.org/api/v2/country,city?apiKey=${API_key}`;
 
 const form = document.getElementById('ip-form');
 const input = document.getElementById('ip-input');
