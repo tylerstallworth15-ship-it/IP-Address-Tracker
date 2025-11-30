@@ -9,9 +9,29 @@ const locationText = document.getElementById('location-value');
 const timezoneText = document.getElementById('timezone-value');
 const ispText = document.getElementById('isp-value');
 
-
 let map;
 let marker;
+
+async function fetchIPData(ip = "") {
+    try {
+        const response = await fetch(`${API_URL}&ipAddress=${ip}`);
+        const data = await response.json();
+    
+        updateUI(data);
+        updateMap(data.location.lat, data.location.lng);
+
+    } catch (error) {
+        alert("Invalid IP address")
+        console.error(error);
+    }
+}
+
+function updateUI(data) {
+    ipText.textContent = data.ip;
+    locationText.textContent = `${data.location.city}, ${data.location.region} ${data.location.postalCode}`;
+    timezoneText.textContent = `UTC ${data.location.timezone}`;
+    ispText.textContent = data.isp;
+}
 
 function updateMap(lat, lng) {
     if (!map) {
@@ -30,17 +50,9 @@ function updateMap(lat, lng) {
     map.setView([lat, lng], 13);
     }
 
+    form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    fetchIPData(input.value);
+});
 
-    async function fetchIPData(ip = "") {
-        try {
-            const response = await fetch(`${API_URL}&ipAddress=${ip}`);
-            const data = await response.json();
-    }
-        updateUI(data);
-        updateMap(data.location.lat, data.location.lng);
-
-    } catch (error) {
-        alert("Invalid IP address")
-        console.error(error);
-    }
-}
+fetchIPData();
