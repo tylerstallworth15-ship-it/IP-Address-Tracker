@@ -43,3 +43,24 @@ header h1 {
     cursor: pointer;
 }
 
+#ip-form button:hover {
+    background-color: rgb(40, 40, 40);
+}
+
+.info-panel {
+    background-color: white;
+    padding: 5%;
+    border-radius: 0% 0 15px 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.info-block {
+    spacing: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    
+}
+
+
+
