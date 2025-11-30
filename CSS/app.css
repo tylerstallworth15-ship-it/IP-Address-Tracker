@@ -5,10 +5,13 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 2rem 0;
+    color: white;
+    padding: 2rem;
 }
 
 .container-fluid {
     padding-left: 0;
     padding-right: 0;
 }
+
+
