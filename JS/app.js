@@ -14,8 +14,17 @@ let marker;
 
 async function fetchIPData(ip = "") {
     try {
-        const response = await fetch(`${API_URL}&ipAddress=${ip}`);
+        const trimmedIp = ip.trim();
+        const url = trimmedIp 
+        ? `${API_URL}&ipAddress=${encodeURIComponent(trimmedIp)}` 
+        : API_URL;
+        
+        const response = await fetch(url);
         const data = await response.json();
+
+        if (data.code || !data.location) {
+            throw new Error(data.messages || "Error fetching data");
+        }
     
         updateUI(data);
         updateMap(data.location.lat, data.location.lng);
