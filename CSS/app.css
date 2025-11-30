@@ -15,17 +15,16 @@ header {
 }
 
 #ip-form {
-    max-width: 100%;
-    margin-left/right: 50px;
+    width: 40%;
+    margin: 0 auto;
     display: flex;
-    gap: 0 rem;
 }
 
 #ip-input {
     flex-grow: 1;
-    padding: 8px 8px 8px 8px;
+    padding: 8px 8px 0px 0px;
     border: lightgrey;
-    border-radius: left 5px;
+    border-radius: 10px 0 0 10px;
     font-size: 1rem;
 }
 
@@ -34,6 +33,6 @@ header {
     color: white;
     border: none;
     padding: 8px 16px;
-    border-radius: right 5px;
+    border-radius: 0 10px 10px 0;
     cursor: pointer;
 }
