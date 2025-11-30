@@ -23,7 +23,7 @@ async function fetchIPData(ip = "") {
         const data = await response.json();
 
         if (data.code || !data.location) {
-            throw new Error(data.messages || "Error fetching data");
+            throw new Error(data.message || "Error fetching data");
         }
     
         updateUI(data);
@@ -57,9 +57,9 @@ function updateMap(lat, lng) {
 
     marker = L.marker([lat, lng]).addTo(map);
     map.setView([lat, lng], 13);
-    }
+}
 
-    form.addEventListener('submit', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
     fetchIPData(input.value);
 });
