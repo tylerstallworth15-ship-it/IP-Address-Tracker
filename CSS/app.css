@@ -9,6 +9,12 @@ header {
     padding: 2rem;
 }
 
+header h1 {
+    margin-bottom: 2%;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
 .container-fluid {
     padding-left: 0;
     padding-right: 0;
@@ -23,8 +29,8 @@ header {
 #ip-input {
     flex-grow: 1;
     padding: 12px;
-    border: lightgrey;
-    border-radius: 10px 0 0 10px;
+    border: 1px solid lightgrey;
+    border-radius: 15px 0 0 15px;
     font-size: 1rem;
 }
 
@@ -32,7 +38,8 @@ header {
     background-color: rgb(59, 59, 59);
     color: white;
     border: none;
-    padding: 8px 16px;
-    border-radius: 0 10px 10px 0;
+    padding: 12px 16px;
+    border-radius: 0 15px 15px 0;
     cursor: pointer;
 }
+
