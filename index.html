@@ -14,54 +14,56 @@
 </head>
 
 <body>
-  <div class="container-fluid"> 
+  <div class="container-fluid">
 
-    <header>
-        <h1>IP Address Tracker</h1>
-
-    <form id="ip-form">
-      <label for="ip-input" class="visually-hidden">Search for an IP address or domain</label>
-      <input type="text" id="ip-input" placeholder="Search for any IP address or domain" required>
-      <button type="submit">
-        <img src="./images/icon-arrow.svg" alt="Submit">
-      </button>
-    </form>
-
-  </header>
+  <header>
+      <h1>IP Address Tracker</h1>
+      <form id="ip-form" class="d-flex justify-content-center mt-3">
+        <label for="ip-input" class="visually-hidden">Search for an IP address or domain</label>
+        <input type="text" id="ip-input" placeholder="Search for any IP address or domain" required>
+        <button type="submit">
+          <img src="./images/icon-arrow.svg" alt="Submit">
+        </button>
+      </form>
+    </header>
   
   <main>
-                            
+
+    <section class="info-panel container py-4">
+      <div class="row text-center text-md-start">
+        
+        <article class="col-12 col-md-3 mb-3 mb-md-0 info-block">
+          <h2>IP ADDRESS</h2>
+          <p id="ip-value">--</p>
+        </article>
+
+        <article class="col-12 col-md-3 mb-3 mb-md-0 info-block">
+          <h2>LOCATION</h2>
+          <p id="location-value">--</p>
+        </article>
+
+        <article class="col-12 col-md-3 mb-3 mb-md-0 info-block">
+          <h2>TIMEZONE</h2>
+          <p id="timezone-value">UTC --</p>
+        </article>
+
+        <article class="col-12 col-md-3 info-block">
+          <h2>ISP</h2>
+          <p id="isp-value">--</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="map-section">
+      <div id="map"></div>
+    </section>
+
   </main>
 
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Tyler Stallworth</a>.
-    </div>
-    
+  <div class="attribution mt-4 mb-2">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+      Coded by <a href="#">Tyler Stallworth</a>
   </div>
-</body>  
- 
-    
-
-    <div class="logo">
-      
-    </div>
-  </nav>  
-  <form id="ip-form">
-    <input type="text" id="ip-input" placeholder="Search for any IP address or domain" required>
-    <button type="submit">
-      <img src="./images/icon-arrow.svg" alt="Submit">
-    </button>
-      
-    
-
-  
-
- 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Tyler Stallworth</a>.
-  </div>
+</div>  
 </body>
 </html>
