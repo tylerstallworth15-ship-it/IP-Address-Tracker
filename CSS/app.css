@@ -22,14 +22,14 @@ header {
 
 #ip-input {
     flex-grow: 1;
-    padding: 8px 8px 0px 0px;
+    padding: 12px;
     border: lightgrey;
     border-radius: 10px 0 0 10px;
     font-size: 1rem;
 }
 
 #ip-form button {
-    background-color: black;
+    background-color: rgb(59, 59, 59);
     color: white;
     border: none;
     padding: 8px 16px;
