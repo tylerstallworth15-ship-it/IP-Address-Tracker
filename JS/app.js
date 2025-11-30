@@ -20,3 +20,27 @@ function updateMap(lat, lng) {
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; OpenStreetMap contributors'
         }).addTo(map);
+    }
+
+    if (marker) {
+        marker.remove();
+    }
+
+    marker = L.marker([lat, lng]).addTo(map);
+    map.setView([lat, lng], 13);
+    }
+
+
+    async function fetchIPData(ip = "") {
+        try {
+            const response = await fetch(`${API_URL}&ipAddress=${ip}`);
+            const data = await response.json();
+    }
+        updateUI(data);
+        updateMap(data.location.lat, data.location.lng);
+
+    } catch (error) {
+        alert("Invalid IP address")
+        console.error(error);
+    }
+}
