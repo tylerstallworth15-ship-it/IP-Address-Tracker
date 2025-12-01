@@ -1,4 +1,4 @@
-const API_key = 'at_8FPC9eMlN6TiaN4yDTyLP0aCsAKZ8';
+const API_key = 'at_t7RHgGXEfdGPG9zYCNiQ3xhHB4bPX';
 const API_URL = `https://geo.ipify.org/api/v2/country,city?apiKey=${API_key}`;
 
 const form = document.getElementById('ip-form');
@@ -13,7 +13,7 @@ let map;
 let marker;
 
 document.addEventListener('DOMContentLoaded', () => {
-    updateMap(37.38605, -122.08385); // Default to Mountain View, CA
+    updateMap(33.7501, 84.3880); // Default to Atlanta, GA
 });
 
 async function fetchIPData(ip = "") {

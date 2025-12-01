@@ -62,7 +62,7 @@ The IP Address Tracker is a responsive web application that allows users to sear
 
 ## <a name="deployment"></a>Deployed Link
 * You can view the repository:
-[Github.com](https://github.com/tylerstallworth15-ship-it/IP-Address-Tracker)
+[Github.com](http://127.0.0.1:3000/index.html?serverWindowId=6bde79da-8ea7-49db-bdee-daafed0282c0)
 * If unable to view please go live locally through VS Code
 
 ## <a name="author"></a>About The Author
@@ -77,6 +77,11 @@ https://www.w3schools.com/html/html_responsive.asp
 * IP Geolocation API- https://geo.ipify.org
 * Leaflet.js documentation
 
+Reflections: Working on the IP Address Tracker project was both challenging and rewarding. I started by building the layout with HTML and CSS, focusing first on making the header, search bar, and info panel match the design. One of the harder parts of this project was getting the info panel to overlap the map correctly. I had to experiment with margin-top, position, and z-index to layer the elements without breaking the layout. Making the design responsive across mobile, tablet, and desktop took time as well, especially adjusting spacing and making sure the info blocks stacked properly on smaller screens.
+
+JavaScript was the hardest part. Setting up the API and handling the fetch call was confusing at first, especially when I kept getting “invalid IP address” errors. Learning how to use try/catch, check for response errors, and update the UI helped me understand how APIs work in real applications. Another challenge was using event listeners correctly—my form wasn’t submitting the data at first, and I eventually realized I needed preventDefault() to stop the page from reloading.
+
+Working with Leaflet.js was new to me as well. Getting the map to load, center correctly, and update with new coordinates taught me how important initialization order is. I also added accessibility features like aria-labels and a live region, which helped me think more intentionally about inclusive design.
 
 
-Unfortunately I have run out of API usage for this month. 
+
