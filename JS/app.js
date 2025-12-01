@@ -12,28 +12,38 @@ const ispText = document.getElementById('isp-value');
 let map;
 let marker;
 
+document.addEventListener('DOMContentLoaded', () => {
+    updateMap(37.38605, -122.08385); // Default to Mountain View, CA
+});
+
 async function fetchIPData(ip = "") {
     try {
         const trimmedIp = ip.trim();
         const url = trimmedIp 
-        ? `${API_URL}&ipAddress=${encodeURIComponent(trimmedIp)}` 
-        : API_URL;
+            ? `${API_URL}&ipAddress=${encodeURIComponent(trimmedIp)}` 
+            : API_URL;
         
         const response = await fetch(url);
+
+        if(!response.ok) {
+            throw new Error(`Network Error: ${response.status}`);
+        }
+
         const data = await response.json();
 
-        if (data.code || !data.location) {
-            throw new Error(data.message || "Error fetching data");
+        console.log("API data:", data);
+
+        if (!data.location) {
+            throw new Error("No location data found");
         }
     
         updateUI(data);
         updateMap(data.location.lat, data.location.lng);
-
     } catch (error) {
-        alert("Invalid IP address")
-        console.error(error);
+        alert("There was an error fetching the IP data: ");
+        console.error(error)
+        }
     }
-}
 
 function updateUI(data) {
     ipText.textContent = data.ip;
