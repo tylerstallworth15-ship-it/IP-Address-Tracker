@@ -74,6 +74,9 @@ MDN Web Docs- Javascript Reference
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
 * W3School -Flexbox and Responsive Design
 https://www.w3schools.com/html/html_responsive.asp
+*Bootstrap- Columns, z- index.
+https://getbootstrap.com/docs/5.3/layout/columns/
+https://getbootstrap.com/docs/5.3/layout/z-index/
 * IP Geolocation API- https://geo.ipify.org
 * Leaflet.js documentation
 
