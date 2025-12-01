@@ -85,6 +85,3 @@ Reflections: Working on the IP Address Tracker project was both challenging and 
 JavaScript was the hardest part. Setting up the API and handling the fetch call was confusing at first, especially when I kept getting “invalid IP address” errors. Learning how to use try/catch, check for response errors, and update the UI helped me understand how APIs work in real applications. Another challenge was using event listeners correctly—my form wasn’t submitting the data at first, and I eventually realized I needed preventDefault() to stop the page from reloading.
 
 Working with Leaflet.js was new to me as well. Getting the map to load, center correctly, and update with new coordinates taught me how important initialization order is. I also added accessibility features like aria-labels and a live region, which helped me think more intentionally about inclusive design.
-
-
-
