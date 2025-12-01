@@ -19,21 +19,21 @@
 
   <header>
       <h1>IP Address Tracker</h1>
-      <form id="ip-form" class="d-flex justify-content-center mt-3">
+      <form id="ip-form" role="search" class="d-flex justify-content-center mt-3">
         <label for="ip-input" class="visually-hidden">Search for an IP address or domain</label>
-        <input type="text" id="ip-input" placeholder="Search for any IP address or domain" required>
-        <button type="submit"> <img src="./images/icon-arrow.svg" alt="Submit">
+        <input type="text" id="ip-input" placeholder="Search for any IP address or domain" aria-label="Search for an IP address or domain" required>
+        <button type="submit" aria-label="Submit IP search"> <img src="./images/icon-arrow.svg" alt="Submit search form">
         </button>
       </form>
     </header>
   
   <main>
 
-    <section class="info-panel container py-4">
+    <section class="info-panel container py-4" aria-live="polite">
       <div class="row text-center text-md-start">
         
-        <article class="col-12 col-md-3 mb-3 mb-md-0 info-block">
-          <h2>IP ADDRESS</h2>
+        <article class="col-12 col-md-3 mb-3 mb-md-0 info-block" aria-labelledby="ip-label">
+          <h2 id="ip-label">IP ADDRESS</h2>
           <p id="ip-value">192.212.174.101</p>
         </article>
 
@@ -54,7 +54,7 @@
       </div>
     </section>
     <section class="map-section">
-      <div id="map"></div>
+      <div id="map" aria-label="Map showing the selected IP address"></div>
     </section>
   </main>
 
